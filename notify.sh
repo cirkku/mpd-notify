@@ -7,8 +7,8 @@ music_dir="$HOME/Mount/3TBHDD/Music"
 #fallback_image= -- Optional fallback image, without it the notifaction will only display the playing song in case of album art not being found --
 
 main () {
-    find_cover >/dev/null
-    send       >/dev/null
+    find_cover 2>/dev/null
+    send       2>/dev/null
 }
 find_cover () {
     ext="$(mpc --format %file% current | sed 's/^.*\.//')"
